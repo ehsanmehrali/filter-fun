@@ -1,0 +1,72 @@
+body {
+  background-color: rgb(105, 89, 114);
+  display: block;
+}
+
+h1 {
+  text-align: center;
+  font-family: Bradley Hand ITC;
+  margin: 5px;
+  color: rgb(51, 3, 34);
+  font-size: 4rem;
+}
+
+canvas {
+  border: 15px groove rgb(224, 103, 182);
+  width: 50%;
+  /**This address is an image as the background of the canvas so that by changing the transparency of the main uploaded image, a visual effect can be obtained by combining two images.**/
+  background: url(https://www.uplooder.net/img/image/54/217fc4817fd35160f4476ace2074119c/nyc-skyline.jpg)
+    no-repeat center center;
+  background-size: contain;
+  display: inherit;
+  margin: auto;
+  padding: auto;
+}
+
+.titles {
+  font-family: fantasy;
+  color: rgb(51, 3, 34);
+  font-size: 1.5rem;
+  margin: 10px 25px;
+  padding: auto;
+}
+
+form {
+  border: 5px solid rgb(51, 3, 34);
+  padding: auto;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+hr {
+  display: block;
+  height: 2px;
+  border: 0;
+  border-top: 5px dashed rgb(51, 3, 34);
+  margin: 0.5em 0;
+  padding: 0;
+}
+
+/**This style belongs to all of the buttons except the upload button with "file" type.**/
+.input {
+  font-family: fantasy;
+  font-size: 20px;
+  width: 150px;
+  border: 1px solid;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  color: rgb(51, 3, 34);
+  margin: 10px 25px;
+  cursor: pointer;
+}
+
+/**This style blongs to only the upload button with "file" type.**/
+input[type="file"] {
+  font-family: fantasy;
+  font-size: 20px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  color: rgb(51, 3, 34);
+  cursor: pointer;
+  margin-left: 50px;
+}

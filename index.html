@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+    <title>Filter Fun Mini Project</title>
+  </head>
+  <body>
+    <main>
+      <canvas id="can"></canvas>
+
+      <h1>FILTER FUN !!</h1>
+
+      <p class="titles">Choose Filters :</p>
+      <!--all activities and buttons(all the buttons are input elements) are inside a form-->
+      <form>
+        <label class="titles">Upload Image</label>
+        <!--The upload button who called uploadimage function-->
+        <input
+          type="file"
+          id="inputfile"
+          multiple="false"
+          accept="image/*"
+          onchange="uploadimage()"
+        />
+
+        <!--The reset button who called doReset function and resets all the filters-->
+        <input
+          type="button"
+          class="input"
+          value="Reset Image"
+          onclick="doReset()"
+        />
+
+        <hr />
+
+        <!--The red filter buttom, who called makeRed function-->
+        <input type="button" class="input" value="Red" onclick="makeRed()" />
+
+        <!--The gray filter buttom  who, called makeGray function-->
+        <input
+          type="button"
+          class="input"
+          value="Grayscale"
+          onclick="makeGray()"
+        />
+
+        <!--The windowpane filter buttom, who called makeWindowpane function-->
+        <input
+          type="button"
+          class="input"
+          value="Window Pane"
+          onclick="makeWindowpane()"
+        />
+
+        <!--The Rainbow filter buttom, who called makeRainbow function-->
+        <input
+          type="button"
+          class="input"
+          value="Rainbow"
+          onclick="makeRainbow()"
+        />
+
+        <br />
+        <label class="titles">Transparency :</label>
+        <!--The Tranceparent filter input with range type to changing the transparensy, who called makeTransparent function-->
+        <input
+          type="range"
+          class="input"
+          min="0"
+          max="255"
+          value="255"
+          id="transparentSlider"
+          oninput="makeTransparent()"
+        />
+
+        <label class="titles">Blur :</label>
+        <!--The Blur filter input with range type to changing the Blur value, who called makeBlur function-->
+        <input
+          type="range"
+          class="input"
+          min="0"
+          max="10"
+          value="0"
+          id="blurSlider"
+          oninput="makeBlur()"
+        />
+      </form>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
